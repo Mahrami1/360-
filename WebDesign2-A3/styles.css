@@ -1,0 +1,1329 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+
+}
+
+
+/* SL-INPUT Custom Styling ------------------------------------------*/
+sl-input::part(base) {
+    background-color: antiquewhite;
+    color: #212c3e;
+    border-radius: 5px;
+}
+
+sl-input::part(control) {
+    color: #2b5871;
+}
+
+sl-textarea::part(base) {
+    background-color: antiquewhite;
+    color: #212c3e;
+    border-radius: 5px;
+}
+
+/*fullpage hacks--------------------------------------*/
+/* nav */
+#fb-nav ul li .fb-tooltip {
+    color: #384150;
+}
+
+
+/*slides nab*/
+.fp-slidesNav {
+    left: 17%;
+    bottom: 15%;
+}
+
+/* section */
+.section {
+    height: 100vh;
+}
+
+.section .fp-tableCell {
+    padding: 0;
+    margin: 0;
+}
+
+
+header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+nav {
+    padding: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #384150;
+    padding: 35px;
+    padding-right: 0;
+}
+
+nav a:hover {
+    color: #4566a0;
+    font-weight: bold;
+}
+
+/* overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #384150;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    overflow: auto;
+}
+
+/* Shop Overlay starts----------------------------------------------------------*/
+#shop {
+    display: block;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-left: 15%;
+    line-height: 1vh;
+
+
+}
+
+.shop-item {
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    text-align: left;
+    transition: color 0.3s ease;
+    display: flex;
+}
+
+.shop-item h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 6vh;
+}
+
+.shop-image {
+    display: none;
+    max-width: 200px;
+    margin-left: 20px;
+    transition: opacity 0.3s ease;
+    position: relative;
+}
+
+/* Show image on hover */
+.shop-item:hover .shop-image {
+    display: block;
+    /* Show the image on hover */
+    opacity: 1;
+    position: fixed;
+    right: 25%;
+    top: 20%;
+}
+
+/* Shop Section Hover Effect */
+.shop-item:hover {
+    color: #6188ff;
+}
+
+
+
+.overlay-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: antiquewhite;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 40px;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: #6188ff;
+}
+
+.shop-image {
+    opacity: 0;
+    /* Hide images initially */
+    transition: opacity 0.3s ease;
+    /* Smooth fade-in */
+}
+
+/*shop Overlay ends----------------------------------------------------------*/
+
+/*Where To Buy Overlay SECTION STARTS------------------------------------------------------------*/
+#whereToBuyOverlay {
+    background-color: #384150;
+    padding: 20px;
+    text-align: left;
+}
+
+#whereToBuyOverlay h1 {
+    color: antiquewhite;
+    text-align: center;
+    font-size: 6vh;
+    margin-top: 2%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#WhereToBuy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 10%;
+}
+
+.distributor {
+    color: antiquewhite;
+    padding: 0;
+    border: none;
+    flex: 0 1 calc(30% - 2%);
+}
+
+/*Where To Buy Overlay SECTION ENDS------------------------------------------------------------*/
+
+
+/*CONTACT US STARTS----------------------------------------------------------------------*/
+.overlay-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#contactOverlay {
+    background-color: #384150;
+}
+
+#contactOverlay h1 {
+    color: antiquewhite;
+    text-align: center;
+    font-size: 6vh;
+    margin-top: 5%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.placeholder .button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-left: 20%;
+}
+
+.placeholder sl-input,
+.placeholder sl-textarea {
+    width: 50VW;
+    margin-bottom: 10px;
+    margin-left: 20%;
+}
+
+.placeholder .message-label {
+    text-align: left;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: 20%;
+
+}
+
+.address {
+    text-align: left;
+    margin-right: 8%;
+    padding-right: 8%;
+}
+
+.address h2 {
+    font-size: 2vw;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2%;
+    color: antiquewhite;
+}
+
+.address p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2%;
+    width: 100%;
+    color: antiquewhite;
+}
+
+/*CONTACT US ENDS-----------------------------------------------------*/
+
+/*overlay end*/
+
+/*section1----------------------------------------------------------------------------------------------*/
+/* Container for logo and product showcase */
+.section #section1 {
+    width: 100vw;
+    height: 100vh;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.logo-container img,
+.product-showcase img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo-container {
+    position: relative;
+    width: 28%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.products {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+/* Product Showcase Styling */
+.product-showcase {
+    position: absolute;
+    width: 200px;
+    height: 500px;
+    top: 30%;
+    left: 35%;
+}
+
+
+.drybag-image,
+.bottle-image,
+.towel-image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.drybag-image {
+    width: 95%;
+    height: auto;
+    left: 54.5%;
+    bottom: 27%;
+}
+
+.bottle-image {
+    width: 45.5%;
+    height: auto;
+    left: 79%;
+    top: -4%;
+}
+
+.towel-image {
+    width: 80%;
+    height: auto;
+    bottom: 30%;
+    left: 62%;
+}
+
+/* Animation for product swapping inside logo*/
+@keyframes productRotate {
+
+    0%,
+    25% {
+        opacity: 1;
+    }
+
+    33%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.drybag-image {
+    animation: productRotate 6s infinite;
+    animation-delay: 0s;
+}
+
+.bottle-image {
+    animation: productRotate 6s infinite;
+    animation-delay: 2s;
+}
+
+.towel-image {
+    animation: productRotate 6s infinite;
+    animation-delay: 4s;
+}
+
+
+#section1 .button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container sl-button::part(base) {
+    background-color: #384150;
+    color: antiquewhite;
+}
+
+/* Hover effect for button */
+.button-container sl-button::part(base):hover {
+    background-color: #657abc;
+}
+
+
+
+/*Section2--------------------------------------------------------------------------------------------*/
+#section2 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#section2 h1 {
+    color: #384150;
+    font-size: 2.5vh;
+    margin: 20px;
+    text-align: left;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+
+svg {
+    cursor: pointer;
+    width: 95%;
+    height: auto;
+
+}
+
+.shape-container {
+    margin: 0;
+    padding: 0;
+}
+
+/* Images container */
+.category-item1,
+.category-item2,
+.category-item3,
+.category-item4,
+.category-item5 {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.category-item1 {
+    bottom: 10%;
+    left: 20%;
+}
+
+.category-item2 {
+    bottom: 20%;
+    left: 25%;
+
+}
+
+.category-item3 {
+    bottom: 20%;
+    left: 45%;
+
+
+}
+
+.category-item4 {
+    bottom: 20%;
+    left: 52%;
+
+
+
+}
+
+.category-item5 {
+    bottom: 20%;
+    left: 35%;
+}
+
+.category-item1 img,
+.category-item2 img,
+.category-item3 img,
+.category-item4 img,
+.category-item5 img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Hover effects for each category item */
+.category-item1:hover img,
+.category-item2:hover img,
+.category-item3:hover img,
+.category-item4:hover img,
+.category-item5:hover img {
+    transform: scale(1.1);
+    /* Zoom effect on hover */
+    filter: brightness(1.2);
+    /* Brightness effect on hover */
+}
+
+
+/*section2 ends----------------------------------------------------------------------------------------*/
+
+
+/*section3-------------------------------------------------------------------------------------------*/
+#section3 {
+    text-align: center;
+    margin: 0;
+    margin-left: 2%;
+    width: 100%;
+}
+
+.latestStories {
+    display: flex;
+    padding: 2%;
+    cursor: grab;
+    gap: 3.5%;
+}
+
+
+#section3 h1 {
+    color: #384150;
+    font-size: 2.5vh;
+    text-align: left;
+    margin-left: 2%;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* Shoelace card styling */
+.card-overview {
+    max-height: 78vh;
+    width: auto;
+    flex: 0 0 auto;
+    text-align: left;
+}
+
+.card-overview img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(30%);
+}
+
+.card-overview strong {
+    color: #333;
+    font-size: 1.5vh;
+    padding: 0;
+}
+
+.card-overview small {
+    color: #888;
+    font-size: 1vh;
+    padding: 0;
+}
+
+/* Footer section in the card */
+.card-overview [slot='footer'] {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+/* Button customization */
+.card-overview sl-button {
+    font-size: 0.5vh;
+    color: antiquewhite;
+    background-color: #384150;
+    border-radius: 20px;
+}
+
+sl-card {
+    --border-color: rgba(38, 58, 80, 0.149);
+    --border-radius: 35px;
+    --border-width: 1px;
+    --padding: 1.5rem;
+}
+
+sl-card::part(base) {
+    background-color: rgba(255, 255, 255, 0.496);
+}
+
+.latestStories sl-button::part(base) {
+    background-color: #384150;
+    color: antiquewhite;
+}
+
+.latestStories sl-button::part(base):hover {
+    background-color: #657abc;
+}
+
+/*section3ends-------------------------------------------------------------------------*/
+
+/*section4-------------------------------------------------------------------------------*/
+#section4 {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#section4 h1 {
+    color: #384150;
+    font-size: 2.5vh;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-left: 25.5%;
+    position: absolute;
+    bottom: 65%;
+}
+
+/* Slider container styling */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+/* Slide styling */
+#slid1,
+#slid2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+/* No need to style images as it is figma png and got all need stylings */
+
+#slid1 p,
+#slid2 p {
+    width: 30%;
+    font-size: 2.5vh;
+    color: #384150;
+    text-align: left;
+    line-height: 3vh;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 10%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+#section4 sl-icon-button {
+    font-size: 2rem;
+    color: #384150;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#section4 sl-icon-button:hover {
+    color: #5a7085;
+}
+
+/*section4 ends*/
+
+/*section4b starts*/
+#section4b {
+    padding: 5%;
+    text-align: center;
+}
+
+.mouse-dragging {
+    position: relative;
+    max-width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.mouse-dragging img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+}
+
+sl-divider {
+    margin: 0;
+    color: #4566a0;
+}
+
+sl-switch {
+    display: block;
+    margin: 70px auto;
+    color: #384150;
+}
+
+/*section4b ends*/
+
+/*section5-------------------------------------------------*/
+.image-container {
+    position: relative;
+}
+
+.instagram-icon1 {
+    position: absolute;
+    bottom: 500%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1;
+}
+
+.image-container:hover .instagram-icon1 {
+    display: block;
+}
+
+.instagram-icon2 {
+    position: absolute;
+    bottom: 500%;
+    right: 40%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1;
+}
+
+.image-container:hover .instagram-icon2 {
+    display: block;
+}
+
+.instagram-icon3 {
+    position: absolute;
+    bottom: 300%;
+    right: 40%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1;
+}
+
+.image-container:hover .instagram-icon3 {
+    display: block;
+}
+
+.instagram-icon4 {
+    position: absolute;
+    bottom: 300%;
+    right: 45%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1;
+}
+
+.image-container:hover .instagram-icon4 {
+    display: block;
+}
+
+.instagram-icon5 {
+    position: absolute;
+    bottom: 1000%;
+    right: 40%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1;
+}
+
+.image-container:hover .instagram-icon5 {
+    display: block;
+}
+
+.instagram-icon6 {
+    position: absolute;
+    bottom: 100%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1;
+}
+
+.image-container:hover .instagram-icon6 {
+    display: block;
+}
+
+.image-container img {
+    transition: filter 0.3s ease;
+}
+
+/* Darken image on hover */
+.image-container:hover img {
+    filter: brightness(0.6);
+}
+
+
+
+#section5 {
+    text-align: center;
+    position: relative;
+    margin-top: 0;
+    display: block;
+}
+
+#section5 h1 {
+    color: #384150;
+    font-size: 2.5vh;
+    text-align: left;
+    margin-left: 14%;
+    margin-bottom: 2%;
+    margin-top: 0;
+}
+
+.community {
+    margin-left: 12.5%;
+    margin-bottom: 5%;
+    height: 50vh;
+
+}
+
+.group1 {
+    display: block;
+    text-align: left;
+    margin-left: 2%;
+    margin-bottom: 5%;
+
+}
+
+.longImage {
+    margin-top: 2px;
+    position: absolute;
+}
+
+.group1 img {
+    margin: 3px;
+}
+
+
+.group23 {
+    position: absolute;
+    top: 6%;
+    left: 28.5%;
+
+}
+
+.group23 img {
+    margin: 3px;
+}
+
+
+
+/*section5 ends*/
+
+/*section6-----------------------------------------------------------*/
+#section6 {
+    background-color: #384150;
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 5%;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    height: 350px;
+
+}
+
+#section6 img {
+    margin-top: 1%;
+    height: 60%;
+    width: auto;
+}
+
+.SUBSCRIBE {
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    display: block;
+    text-align: left;
+}
+
+#section6 sl-input {
+    width: 30vw;
+    height: auto;
+}
+
+#section6 sl-button {
+    margin-bottom: 2%;
+    margin-left: 40.5%;
+    margin-top: 1%;
+}
+
+/* SL-BUTTON Custom Styling */
+#section6 sl-button::part(base) {
+    background-color: #4CAF50;
+    color: antiquewhite;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+#section6 sl-button::part(base):hover {
+    background-color: #4566a0;
+    color: antiquewhite;
+}
+
+
+.buttonIcons {
+    display: flex;
+    gap: 2%;
+    margin-top: 2%;
+}
+
+.icon-link img {
+    width: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect for icons */
+.icon-link:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+/*section6 ends*/
+
+
+/* Responsive adjustments =======================================================================*/
+/*mobile---iphone11 pro potrait*/
+@media (min-width: 375px) and (max-width:812px) {
+
+    header {
+        padding: 1%;
+        font-size: 12px;
+
+    }
+
+    nav a {
+        padding: 10px;
+        padding-right: 0;
+
+    }
+
+    #section1 {
+        margin-bottom: 45%;
+    }
+
+    .logo-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    #section1 .button-container {
+        display: flex;
+        justify-content: center;
+        margin-left: 10%;
+    }
+
+    .drybag-image {
+        width: 70%;
+        height: auto;
+        left: 35%;
+        bottom: 49%;
+    }
+
+    .bottle-image {
+        width: 33%;
+        height: auto;
+        left: 52%;
+        top: -3%;
+    }
+
+    .towel-image {
+        width: 58%;
+        height: auto;
+        bottom: 51%;
+        left: 41%;
+    }
+
+    svg {
+        display: none;
+    }
+
+    .category-images {
+        display: block;
+        text-align: center;
+    }
+
+    #section2 h1 {
+        top: 1%;
+        left: 1%;
+        font-size: 1.5vh;
+    }
+
+    .category-item1,
+    .category-item2,
+    .category-item3,
+    .category-item4,
+    .category-item5 {
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        cursor: pointer;
+        pointer-events: auto;
+        max-width: 40%;
+        max-height: 40%;
+    }
+
+    #section2 {
+
+        height: 721px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .category-item1 {
+        left: 6%;
+        top: 10%
+    }
+
+    .category-item2 {
+        left: 50%;
+        top: 5%;
+    }
+
+    .category-item3 {
+        left: 6.6%;
+        top: 30%;
+    }
+
+    .category-item4 {
+        left: 60%;
+        top: 35%;
+    }
+
+    .category-item5 {
+        left: 30%;
+        top: 58%;
+    }
+
+    .card-overview {
+        max-width: 250px;
+        width: 45%;
+        flex: 0 0 auto;
+        text-align: left;
+    }
+
+    #section3 h1 {
+        font-size: 1.5vh;
+        margin-left: 2%;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .card-overview strong {
+        font-size: 10px;
+    }
+
+    .card-overview small {
+        font-size: 10px;
+    }
+
+
+    .right-image1,
+    .right-image2 {
+        display: none;
+    }
+
+    .left-image1,
+    .left-image2 {
+        width: 40%;
+        height: auto;
+
+    }
+
+    #section4 h1 {
+        font-size: 1.5vh;
+        margin-left: 46.5%;
+        bottom: 62%;
+    }
+
+    #slid1 p,
+    #slid2 p {
+        font-size: 2vh;
+        line-height: 2.5vh;
+        width: 50%;
+        margin-top: 30%;
+        margin-right: 3%;
+    }
+
+    .button-container {
+        justify-content: flex-end;
+        margin-right: 10%;
+    }
+
+    #section4 sl-icon-button {
+        font-size: 1rem;
+
+    }
+
+    .mouse-dragging {
+        height: max-content;
+    }
+
+    #section4b {
+        display: none;
+    }
+
+    #section5 {
+        display: none;
+    }
+
+    .drybag,
+    .bottle,
+    .towel,
+    .thermal,
+    .cookware {
+        display: none;
+    }
+
+
+
+    .shop-item h1 {
+        font-size: 4vh;
+        line-height: 5vh;
+        margin: 0%;
+        padding: 0;
+        text-decoration: underline;
+    }
+
+    #whereToBuyOverlay h1 {
+        font-size: 3vh;
+        margin-top: 10%;
+        background-color: #384150;
+        text-align: center;
+    }
+
+    #WhereToBuy {
+        display: block;
+        margin-left: 5%;
+        margin-bottom: 0;
+        margin-top: 10%;
+        position: absolute;
+        bottom: -40%;
+    }
+
+    .distributor p {
+        margin-top: 10%;
+        font-size: 1.5vh;
+    }
+
+    #whereToBuyOverlay overlay-content {
+        margin-top: 10%;
+        padding: 0;
+    }
+
+    #contactOverlay h1 {
+        font-size: 3vh;
+        margin-top: 20%;
+
+    }
+
+    .address {
+        text-align: left;
+        margin-left: 14%;
+        padding-right: 8%;
+    }
+
+    .address h2 {
+        font-size: 3vw;
+    }
+
+    .address p {
+        font-size: 2.5vw;
+    }
+
+    #contact {
+        margin-top: 0;
+        padding-top: 0;
+        margin-bottom: 20%;
+    }
+
+    .placeholder sl-input,
+    .placeholder sl-textarea {
+        width: 70VW;
+    }
+
+}
+
+/*===============Disabled it as it was interpting the potrait size============================================================*/
+/* Mobile---iphone11 pro landscape*/
+/*@media (max-width: 768px) {
+    #section1 {
+        display: block;
+
+    }
+
+    .logo-container img {
+        max-width: 25%;
+        height: auto;
+    }
+
+    .bottle-image {
+        width: 15%;
+        height: auto;
+        left: 70%;
+        top: 0;
+    }
+
+    .drybag-image {
+        display: none;
+    }
+
+    .towel-image {
+        display: none;
+    }
+
+    .logo-container {
+        position: absolute;
+        left: 10%
+    }
+
+    #section1 .button-container {
+        position: absolute;
+        top: 15%;
+        left: 15%;
+    }
+
+    #section2 h1 {
+        font-size: 4vh;
+    }
+
+    .category-item1,
+    .category-item2,
+    .category-item3,
+    .category-item4,
+    .category-item5 {
+        max-width: 20%;
+        max-height: 20%;
+    }
+
+    .category-item1 {
+        left: 3%;
+        top: 15%
+    }
+
+    .category-item2 {
+        left: 20%;
+        top: 6%;
+    }
+
+    .category-item3 {
+        left: 75%;
+        top: 10%;
+    }
+
+    .category-item4 {
+        left: 40%;
+        top: 10%;
+    }
+
+    .category-item5 {
+        left: 55%;
+        top: 10%;
+    }
+
+    #section3 {
+        display: none;
+    }
+
+    #section4 h1 {
+        font-size: 4vh;
+        margin-left: 25%;
+        bottom: 80%;
+    }
+
+    .left-image1,
+    .left-image2 {
+        width: auto;
+        height: 40%;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .right-image1,
+    .right-image2 {
+        display: block;
+        width: auto;
+        height: 40%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #slid1 p,
+    #slid2 p {
+        font-size: 4vh;
+        line-height: 4vh;
+        width: 40%;
+        margin-top: 10%;
+        margin-right: 6%;
+    }
+
+    .shop-image {
+        display: none
+    }
+
+    #drybag,
+    #bottle,
+    #towel,
+    #thermal,
+    #cookware {
+        display: none;
+    }
+
+    .shop-item h1 {
+        font-size: 6vh;
+    }
+
+    #shop {
+        margin-top: 10%;
+    }
+
+    .distributor p {
+        font-size: 3vh;
+    }
+
+    #whereToBuyOverlay h1 {
+        font-size: 5vh;
+    }
+
+    #WhereToBuy {
+        display: flex;
+        gap: 2%;
+    }
+}*/

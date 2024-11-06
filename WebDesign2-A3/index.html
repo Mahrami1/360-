@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360 Degrees</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Masuma Mahrami">
+    <meta name="description" content="360 Degrees">
+    <meta name="keywords" content="360Degrees, OutdoorGears, Adventure, Outdoor, Camping">
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">-->
+    <!-- pure-responsive -->
+    <!-- <link rel="stylesheet" href="https://purecss.io/css/pure-min.css">-->
+    <!--shoelace link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/themes/light.css">
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/shoelace-autoloader.js"></script>
+    <!--fullpage.js css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.30/fullpage.min.css"
+        integrity="sha512-/ObUqh1cljaDdbTKrXRG+6FTTS9RRDWOuBjMKeD7SZeQRICPDVA/qOJjWNilrNplbu7TNeqrBJ/LGBXL2EpaUg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo-small.png">
+</head>
+
+<body>
+    <!-- Header-->
+    <header>
+        <img src="images/logo-small.png" alt="logo">
+        <nav>
+            <a href="javascript:void(0)" onclick="openOverlay('shop')">Shop</a>
+            <a href="javascript:void(0)" onclick="openOverlay('whereToBuy')">Where To Buy</a>
+            <a href="javascript:void(0)" onclick="openOverlay('contact')">Contact</a>
+        </nav>
+    </header>
+
+
+
+    <!-- Shop Overlay -->
+    <div id="shopOverlay" class="overlay">
+        <span class="closebtn" onclick="closeOverlay('shop')">&times;</span>
+        <div class="overlay-content" id="shop">
+            <div class="shop-item" onmouseover="showImage('drybag')" onmouseout="hideImage('drybag')">
+                <h1>DRY BAGS</h1>
+                <img id="drybag" class="shop-image" src="images/drybag.png" alt="Dry Bag Image">
+            </div>
+            <div class="shop-item" onmouseover="showImage('drybag')" onmouseout="hideImage('drybag')">
+                <h1>WATTER BOTTLES</h1>
+                <img id="bottle" class="shop-image" src="images/bottle-category.png" alt="watter bottle">
+            </div>
+            <div class="shop-item" onmouseover="showImage('towel')" onmouseout="hideImage('towel')">
+                <h1>MICROFIBRE TOWELS</h1>
+                <img id="towel" class="shop-image" src="images/towel.png" alt="Towel Image">
+            </div>
+            <div class="shop-item" onmouseover="showImage('thermal')" onmouseout="hideImage('thermal')">
+                <h1>THERMALS RAINWEAR</h1>
+                <img id="thermal" class="shop-image" src="images/thermal.png" alt="Thermal Image">
+            </div>
+            <div class="shop-item" onmouseover="showImage('cookware')" onmouseout="hideImage('cookware')">
+                <h1>STOVES & COOKWARE</h1>
+                <img id="cookware" class="shop-image" src="images/FurnoStove.png" alt="Cookware Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Where To Buy Overlay -->
+    <div id="whereToBuyOverlay" class="overlay">
+        <span class="closebtn" onclick="closeOverlay('whereToBuy')">&times;</span>
+        <h1>DISTRIBUTORS</h1>
+        <div class="overlay-content" id="WhereToBuy">
+            <div class="distributor">
+                <p class="p1">AUSTRALIA<br>
+                    Sea to Summit Pty Ltd<br>
+                    Email: service@seatosummit.com.au<br>
+                    Website: stsdistributedbrands.com.au
+                </p>
+            </div>
+            <div class="distributor">
+                <p class="p2">BENELUX<br>
+                    Technolyt<br>
+                    Contact: Peter Wayper<br>
+                    Email: info@technolyt.nl<br>
+                    Phone: +31 75 647 45 47<br>
+                    Website: www.outdoordacht.nl
+                </p>
+            </div>
+            <div class="distributor">
+                <p class="p3">CZECH REPUBLIC<br>
+                    Pavel Habáč s.r.o.<br>
+                    Contact: Pavel Habáč<br>
+                    Email: ph@warmpeace.cz<br>
+                    Phone: +420 602 364 249<br>
+                    Website: www.warmpeace.cz
+                </p>
+            </div>
+            <div class="distributor">
+                <p class="p4">NEW ZEALAND<br>
+                    Southern Approach<br>
+                    Contact: Graeme Todd<br>
+                    Email: service@southernapproach.co.nz<br>
+                    Phone: +64 3 389 9760<br>
+                    Website: www.southernapproach.co.nz
+                </p>
+            </div>
+            <div class="distributor">
+                <p class="p5">NORWAY<br>
+                    Cirdan AS<br>
+                    Contact: Per Mosbæk<br>
+                    Email: firmapost@cirdan.no<br>
+                    Phone: +47 2202 5000<br>
+                    Website: www.cirdan.no
+                </p>
+            </div>
+            <div class="distributor">
+                <p class="p5">FRANCE<br>
+                    Nic-Impex<br>
+                    Contact: Antoine Ferrer<br>
+                    Email: marketing@nic-impex.com<br>
+                    Phone: +33 04 5057 1351
+                </p>
+            </div>
+            <div class="distributor">
+                <p class="p6">ITALY<br>
+                    Nic-Impex<br>
+                    Contact: Nicolas Barrucand<br>
+                    Email: export@nix-impex.com<br>
+                    Phone: +33450571351<br>
+                    Website: www.nic-impex.com
+                </p>
+            </div>
+            <div class="distributor">
+                <p class="p7">PHILIPPINES<br>
+                    Uniglobe Travelware<br>
+                    Contact: German Ng<br>
+                    Email: german.ng@primergrp.com<br>
+                    Phone: +632 3031234<br>
+                    Website: www.primergrp.com
+                </p>
+            </div>
+            <div class="distributor">
+                <p class="p8">USA<br>
+                    Sea to Summit<br>
+                    Contact: Brendan Harris<br>
+                    Email: brendan.harris@seatosummit.com.au<br>
+                    Phone: +61 8 9221 6617
+                </p>
+            </div>
+            <div class="distributor">
+                <p class="p9">GERMANY<br>
+                    Sea to Summit GmbH<br>
+                    Contact: Jürgen Schütte<br>
+                    Email: bestellungen@360degrees.com.au<br>
+                    Phone: +49 2131 1538369
+                </p>
+            </div>
+            <div class="distributor">
+                <p class="p10">UNITED KINGDOM<br>
+                    Mountain Boot Company<br>
+                    Contact: Jo Overton<br>
+                    Phone: +44 191 296 0212<br>
+                    Email: info@mountainboot.co.uk<br>
+                    Website: www.mountainboot.co.uk
+                </p>
+            </div>
+            <div class="distributor">
+                <p class="p11">SPAIN<br>
+                    J. Esteller, SL<br>
+                    Contact: Ivan Martínez<br>
+                    Email: info@esteller.com<br>
+                    Phone: +34 9367 2451 0<br>
+                    Website: www.esteller.com
+                </p>
+            </div>
+            <div class="distributor">
+                <p class="p12">SWEDEN<br>
+                    Skridskobolaget Devex AB<br>
+                    Contact: Ragnar Wijkström<br>
+                    Email: skridskobolaget@devex.se<br>
+                    Phone: +46 8 605 30 15<br>
+                    Website: www.seatosummit.se
+                </p>
+            </div>
+            <div class="distributor">
+                <p class="p13">SWITZERLAND<br>
+                    Kundert Vario AG<br>
+                    Huebstrasse 3<br>
+                    8633 Wolfhausen<br>
+                    Switzerland<br>
+                    Phone: +41 55 243 43 20<br>
+                    Email: info@kundertvario.ch<br>
+                    Website: www.kundertvario.ch
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Contact Overlay -->
+    <div id="contactOverlay" class="overlay">
+        <span class="closebtn" onclick="closeOverlay('contact')">&times;</span>
+        <h1>CONTACT US</h1>
+        <div class="overlay-content" id="contact">
+            <div class="placeholder">
+                <sl-input placeholder="Name"></sl-input>
+                <sl-input placeholder="Email"></sl-input>
+
+                <label for="message" class="message-label">Message</label>
+                <sl-textarea id="message"></sl-textarea>
+
+                <div class="button-container">
+                    <sl-button>Send Message</sl-button>
+                </div>
+            </div>
+            <div class="address">
+                <h2>EMAIL</h2>
+                <p>service@seatosummit.com.au</p>
+                <h2>OUR MAIN OFFICE</h2>
+                <p>5 Eyre St, Rivervale WA 6103</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!--fullpage-->
+    <div id="fullpage">
+        <!--Section1-->
+        <div class="section" id="section1">
+            <div class="logo-container">
+                <img src="images/logo-animation.png" class="logo" alt="Logo Animation">
+                <div class="product-showcase">
+                    <img src="images/drybag.png" class="drybag-image" alt="Product in 0">
+                    <img src="images/bottle.png" class="bottle-image" alt="Product in 0">
+                    <img src="images/towel.png" class="towel-image" alt="Product in 0">
+                </div>
+            </div>
+
+            <div class="button-container">
+                <a href="https://www.greentrails.com.au/?s=360+degrees&post_type=product" target="_blank">
+                    <sl-button>Shop Now</sl-button>
+                </a>
+            </div>
+        </div>
+        <!--Section2-->
+        <div class="section" id="section2">
+            <h1>SHOP BY CATEGORY</h1>
+            <div class="shape-container">
+                <svg xmlns="http://www.w3.org/2000/svg" id="categoryShape" viewBox="0 0 1366 768">
+                    <polygon id="animatedPolygon"
+                        points="683 53.3 877.02 53.3 1020 219 1225.07 219 1225.07 384.07 1042.68 714.83 481 714.83 141.32 482.33 141.32 310.18 422 310.18 422 108.8 683 108.8 683 53.3"
+                        style="fill:#434a53;" />
+                </svg>
+                <!-- Images container -->
+                <div class="category-images">
+                    <div class="category-item1">
+                        <a href="https://www.greentrails.com.au/?s=360+degrees+bottles&post_type=product"
+                            target="_blank">
+                            <img src="images/bottle-category.png" alt="Bottle">
+                        </a>
+                    </div>
+                    <div class="category-item2">
+                        <a href="https://www.greentrails.com.au/hiking-gear/360-degrees-dry-bag/" target="_blank">
+                            <img src="images/drybag-category.png" alt="Drybag">
+                        </a>
+                    </div>
+                    <div class="category-item3">
+                        <a href="https://www.greentrails.com.au/hiking-gear/360-degrees-polypro-active-thermal-top/"
+                            target="_blank">
+                            <img src="images/thermal.png" alt="Thermal Clothing">
+                        </a>
+                    </div>
+                    <div class="category-item4">
+                        <a href="https://www.greentrails.com.au/?s=360+degrees+furno+stove&post_type=product"
+                            target="_blank">
+                            <img src="images/FurnoStove.png" alt="Furno Stove">
+                        </a>
+                    </div>
+                    <div class="category-item5">
+                        <a href="https://www.greentrails.com.au/hiking-gear/360-degrees-compact-microfibre-towel/"
+                            target="_blank">
+                            <img src="images/towel.png" alt="Towel">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Section 3 - Latest Stories -->
+        <div class="section" id="section3">
+            <h1>LATEST STORIES</h1>
+            <div class="latestStories">
+
+                <sl-card class="card-overview">
+                    <img slot="image" src="images/latestStories-1.png" alt="Finders Keepers with Scotty and Mattsy">
+                    <strong>Finders Keepers</strong><br>
+                    <small>5 min read</small>
+                    <div slot="footer">
+                        <a href="https://seatosummit.com.au/blogs/adventure-tips/interview-andrew-hughes-global-family-bike-journey"
+                            target="_blank">
+                            <sl-button>Read More</sl-button>
+                        </a>
+                    </div>
+                </sl-card>
+
+
+                <sl-card class="card-overview">
+                    <img slot="image" src="images/latestStories-2.png" alt="Travel Essentials">
+                    <strong>Travel Essentials</strong><br>
+                    <small>6 min read</small>
+                    <div slot="footer">
+                        <a href="https://seatosummit.com.au/blogs/adventure-tips/your-guide-to-the-ultimate-first-aid-kit"
+                            target="_blank">
+                            <sl-button>Read More</sl-button>
+                        </a>
+                    </div>
+                </sl-card>
+
+
+                <sl-card class="card-overview">
+                    <img slot="image" src="images/latestStories-3.png" alt="On the Theft of Dreams">
+                    <strong>Dreams Theft</strong><br>
+                    <small>6 min read</small>
+                    <div slot="footer">
+                        <a href="https://seatosummit.com.au/blogs/adventure-tips/16-tips-to-get-a-good-nights-sleep-outdoors"
+                            target="_blank">
+                            <sl-button>Read More</sl-button>
+                        </a>
+                    </div>
+                </sl-card>
+
+                <sl-card class="card-overview">
+                    <img slot="image" src="images/latestStories-4.png" alt="Where to Find Hope on Climate">
+                    <strong>Hope on Climate</strong><br>
+                    <small>8 min read</small>
+                    <div slot="footer">
+                        <a href="https://seatosummit.com.au/blogs/adventure-tips/project-zeros-epic-journey-of-climate-change-advocacy"
+                            target="_blank">
+                            <sl-button>Read More</sl-button>
+                        </a>
+                    </div>
+                </sl-card>
+
+                <sl-card class="card-overview">
+                    <img slot="image" src="images/latestStories-5.png" alt="The Wall as a Mirror">
+                    <strong>The Wall as a Mirror</strong><br>
+                    <small>7 min read</small>
+                    <div slot="footer">
+                        <a href="https://seatosummit.com.au/blogs/behind-the-brand" target="_blank">
+                            <sl-button>Read More</sl-button>
+                        </a>
+                    </div>
+                </sl-card>
+
+                <sl-card class="card-overview">
+                    <img slot="image" src="images/latestStories-6.png" alt="Your Next Destination">
+                    <strong>Next Destination</strong><br>
+                    <small>7 min read</small>
+                    <div slot="footer">
+                        <a href="https://seatosummit.com.au/blogs/behind-the-brand/interview-glenn-and-kendall"
+                            target="_blank">
+                            <sl-button>Read More</sl-button>
+                        </a>
+                    </div>
+                </sl-card>
+            </div>
+        </div>
+
+
+
+        <!-- Section 4 -->
+        <div class="section" id="section4">
+            <h1>OUR STORY</h1>
+            <div class="slides">
+                <!-- Slide 1 -->
+                <div class="slid" id="slid1">
+                    <img src="images/about1-left.png" alt="About Image Left 1" class="left-image1">
+                    <p>From seasonal hikers to first-time family campers, 360 Degrees offers a
+                        range of outdoor accessories and gear that is essential for every
+                        outdoor pursuit.</p>
+                    <img src="images/about1-right.png" alt="About Image Right 1" class="right-image1">
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slid" id="slid2" style="display: none;">
+                    <img src="images/about2-left.png" alt="About Image Left 2" class="left-image2">
+                    <p>Developed by a team of outdoor enthusiasts, we have worked hard to provide
+                        products that combine function and affordability, with a little edge of
+                        sophistication.</p>
+                    <img src="images/about2-right.png" alt="About Image Right 2" class="right-image2">
+                </div>
+            </div>
+            <!-- Shoelace Icon Button for changing slides -->
+            <div class="button-container">
+                <sl-icon-button name="arrow-left-square" onclick="showSlide(1)"></sl-icon-button>
+                <sl-icon-button name="arrow-right-square" onclick="showSlide(2)"></sl-icon-button>
+            </div>
+        </div>
+        <!--section 4b-->
+        <div class="section" id="section4b">
+            <div class="mouse-dragging">
+                <sl-carousel autoplay loop pagination>
+                    <sl-carousel-item>
+                        <img alt="digital signage" src="images/360Degree.jpg">
+                    </sl-carousel-item>
+                    <sl-carousel-item>
+                        <img alt="tradeshow" src="images/tradeshow.jpg">
+                    </sl-carousel-item>
+                    <sl-carousel-item>
+                        <img alt="yellow water bottle" src="images/yellowbottleimg.jpg">
+                    </sl-carousel-item>
+                    <sl-carousel-item>
+                        <img alt="point of sale image" src="images/POS.jpg">
+                    </sl-carousel-item>
+                    <sl-carousel-item>
+                        <img alt="furno stove package" src="images/furnostove.jpg">
+                    </sl-carousel-item>
+                </sl-carousel>
+                <sl-switch>Enable mouse dragging</sl-switch>
+            </div>
+        </div>
+
+
+        <!--Section5-->
+        <div class="section" id="section5">
+            <h1>OUR COMMUNITY</h1>
+            <div class="community">
+                <div class="group23">
+                    <div class="group2">
+                        <a href="https://www.instagram.com/seatosummit/?hl=en" target="_blank" class="image-container">
+                            <img src="images/community-6.png" class="img1" alt="social media post">
+                            <span class="instagram-icon1">
+                                <img src="images/Instagram1.png" alt="Instagram Icon">
+                            </span>
+                        </a>
+                        <a href="https://www.instagram.com/seatosummit/?hl=en" target="_blank" class="image-container">
+                            <img src="images/community-2.png" class="img2" alt="social media post">
+                            <span class="instagram-icon2">
+                                <img src="images/Instagram1.png" alt="Instagram Icon">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="group3">
+                        <a href="https://www.instagram.com/seatosummit/?hl=en" target="_blank" class="image-container">
+                            <img src="images/community-3.png" class="img3" alt="social media post">
+                            <span class="instagram-icon3">
+                                <img src="images/Instagram1.png" alt="Instagram Icon">
+                            </span>
+                        </a>
+                        <a href="https://www.instagram.com/seatosummit/?hl=en" target="_blank" class="image-container">
+                            <img src="images/community-4.png" class="img4" alt="social media post">
+                            <span class="instagram-icon4">
+                                <img src="images/Instagram1.png" alt="Instagram Icon">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="group1">
+                    <a href="https://www.instagram.com/seatosummit/?hl=en" target="_blank" class="image-container">
+                        <img src="images/community-1.png" class="img5" alt="social media post">
+                        <span class="instagram-icon5">
+                            <img src="images/Instagram1.png" alt="Instagram Icon">
+                        </span>
+                    </a>
+
+                    <div class="longImage">
+                        <a href="https://www.instagram.com/seatosummit/?hl=en" target="_blank" class="image-container">
+                            <img src="images/community-5.png" class="img6" alt="social media post">
+                            <span class="instagram-icon6">
+                                <img src="images/Instagram1.png" alt="Instagram Icon">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Section6-->
+            <div id="section6">
+                <img src="images/sustainabilty-logo.png" alt="logo">
+                <div>
+                    <div class="SUBSCRIBE">
+                        <sl-input id="emailInput" placeholder="Email"></sl-input>
+
+                        <div class="buttonIcons">
+                            <a href="https://www.facebook.com/SeatoSummitGear/" target="_blank" class="icon-link">
+                                <img src="images/facebook.png" alt="Facebook">
+                            </a>
+                            <a href="https://www.instagram.com/seatosummit/?hl=en" target="_blank" class="icon-link">
+                                <img src="images/Instagram.png" alt="Instagram">
+                            </a>
+                            <a href="https://www.youtube.com/user/SeatoSummitTV?themeRefresh=1" target="_blank"
+                                class="icon-link">
+                                <img src="images/youtube.png" alt="YouTube">
+                            </a>
+                            <sl-button id="subscribeButton">Subscribe</sl-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.30/fullpage.extensions.min.js"
+        integrity="sha512-6blgBrHOsOkBwDfWwlMzxk+QsdeRqsb2IOXayiO1Ow0xEfqBt0UEiPes8XmspwpzFN3FDDsEUBujF4/u86Q8vA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

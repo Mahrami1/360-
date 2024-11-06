@@ -1,0 +1,194 @@
+Task: 360 degrees one long scrolling page website with three overlay pages.The long page is devided into six sections and a footer at the bottom.
+OVERLAY
+    INPUT VARIABLES:
+    1.Navigation buttons:
+        Shop
+        Where to Buy
+        Contact
+    2.Overlay interactions:
+        Mouse touch on headings (H1 elements)
+        Form inputs: Name, Email, Message
+        Close/X button on each overlay
+
+    OUTPUT VARIABLES:
+    1.Display overlay screens
+        Form alerts:
+            Thank you message
+            Please fill out all fields
+        Overlay close actions returning to the main page
+
+START
+    User clicks on top navigation buttons ("Shop," "Where to Buy," "Contact"):
+        Display the corresponding overlay screen
+        Hide the long-scrolling main page behind overlay
+    User clicks "Shop" button:
+        Display Shop overlay
+        Mouse touch interaction on headings (H1 elements):
+            Change color of H1 elements
+            Display associated product images (PNG files)
+    User clicks Close or X button:
+        Hide Shop overlay
+        Return to long main page
+    User clicks "Contact" button:
+        Display Contact overlay
+        User inputs name, email, and message:
+            Store input values
+    User clicks Send Message button:
+        If all fields are filled:
+        Show alert: "Thank you! Your message has been sent."
+        Display OK button in alert
+        User clicks OK button:
+            Close alert
+            Clear input fields
+    If any field is empty:
+        Show alert: "Please fill out all fields."
+    User clicks Close or X button:
+        Hide Contact overlay
+        Return to long main page
+    User clicks "Where to Buy" button:
+        Display Where to Buy overlay
+        User clicks Close or X button:
+            Hide Where to Buy overlay
+            Return to long main page
+END
+
+FULL PAGE
+    INPUT VARIABLES:
+    1.Full Page Navigation and Scrolling
+        Navigation actions:
+            Page scroll (to move between sections)
+            Button clicks (e.g., "Shop Now," "Read More")
+        Section-specific actions:
+            Hover over images
+            Mouse touch on icons
+            Clicks on icons and buttons
+    2.Section 1 - Interactive Logo and "Shop Now"
+        Logo animation (loop animation on "0" in the "360" logo)
+        "Shop Now" button click (links to an external site)
+    3.Section 2 - Product Categories and SVG Animation
+        Scroll action to trigger loadScene animation
+        Product image click (links to an external product site)
+        Scroll up to re-trigger SVG animations
+    3.Section 3 - Latest Stories
+        "Read More" button click on story cards (links to external blog)
+    4.Section 4 - Slideshow
+        Button clicks on "arrow-right-square" and "arrow-left-square" (slide change)
+    5.Section 4b - Image Gallery
+        Switch toggle click (enables mouse dragging for the carousel)
+        Carousel mouse dragging when enabled
+    6.Sections 5 and 6 (Footer)
+        Image hover effect (images darken)
+        Image click (links to external Instagram page)
+        Email input (for subscription)
+        "Subscribe" button click (validates email and displays alert)
+        Social media icon click (links to external social media pages)
+        Hover over social media icons (icons scale up)
+    
+    OUTPUT VARIABLES:
+    1.Full Page Navigation and Scrolling
+        Display each section as the user scrolls down
+        Trigger animations and load functions when a section comes into view
+    2.Section 1 - Interactive Logo and "Shop Now"
+        Logo animation (plays in a loop within the "0" of the 360 logo)
+        External link opens in a new tab upon "Shop Now" click
+    3.Section 2 - Product Categories and SVG Animation
+        loadScene animation (fades in product images and moves them on screen)
+        SVG morphing animation (shapes change with section scrolling)
+        Product links open in a new tab when images are clicked
+    4.Section 3 - Latest Stories
+        External link to blog opens in a new tab when "Read More" is clicked
+    5.Section 4 - Slideshow
+        Display slide 1 or slide 2 based on button clicks (slide arrows)
+    6.Section 4b - Image Gallery
+        Carousel behavior toggles between static and mouse-dragging
+        Carousel images loop automatically (autoplay enabled)
+    7.Sections 5 and 6 (Footer)
+        Image hover effect (darken on hover)
+        Instagram link opens in a new tab when an image is clicked
+        Subscription alert (shows "Thank you for subscribing!" message)
+        Clear email input after subscription alert closes
+        Validation alert for invalid email
+        Social media links open in new tabs
+        Social media icons scale up on hover
+
+
+
+START
+    sections:
+        section1
+            The CSS animation plays in a loop inside the 0 of 360 logo
+            User clicks on the "shop now" button
+                Link user to the external website page in a new tab that sells the 360 products
+        User scrolls down
+            Display section2
+            Run function loadScene
+                Trigger SVG animation when 50% of section2 is in the viewport "threshold: 0.5"
+            User clicks product PNG image
+                Link user to the external website page in a new tab that sells the 360 products (five different product categories)
+            User scrolls down
+                Display section3
+            User scrolls up
+                Display section2 and trigger svg animation again
+                    Run function loadScene()
+        User scrolls down
+            Display section3
+            User clicks the "read more" button inside the sl-cards
+                Link user to the external website page in a new tab "Sea to Summit blogs"
+        User scrolls down 
+            Display section4
+            Run function showSlide
+                FUNCTION showSlide()
+                    User clicks sl-icon-button "arrow-right-square"
+                        Hide slide 1 and show slide 2
+                    User clicks sl-icon-button "arrow-left-square"
+                        Hide slide 2 and show slide 1
+                END FUNCTION
+        User scrolls down 
+            Display section4b
+                sl-carousel autoplay loop pagination "image gallery"
+            User clicks sl-switch 
+                Enable mouse dragging
+        User scrolls down 
+            Display section5 and section6-footer
+            section5
+                User's mouse touches the image
+                    Image hover effect: image gets darker
+                User clicks on the images 
+                    Link user to Instagram account page in a new tab
+            footer
+                User inputs their email to subscribe 
+                    User clicks the subscribe button
+                        If email is valid:
+                            Alert saying "Thank you for subscribing!" shows up
+                            User clicks OK
+                                Alert message closes and input data clears
+                        Else if email is invalid:
+                            Alert saying "Please enter a valid email address." shows up
+                User's mouse touches the social media icons 
+                    Icons hover effect: scale up
+                User clicks social media icons
+                    Link user to social media account pages in a new tab
+END
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
